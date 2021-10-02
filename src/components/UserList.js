@@ -1,8 +1,8 @@
-import React from 'react';
-import User from './User';
+import React from "react";
+import User from "./User";
 
-const UserList = props => {
-  const userElements = props.users.map(user => {
+const UserList = (props) => {
+  const userElements = props.users.map((user) => {
     return (
       <li key={user.id}>
         <User user={user} />

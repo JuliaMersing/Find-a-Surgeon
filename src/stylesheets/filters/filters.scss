@@ -1,0 +1,12 @@
+@import "../core/mixing.scss";
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include tablet {
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+}

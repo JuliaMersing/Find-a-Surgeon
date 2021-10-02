@@ -1,0 +1,37 @@
+@import "../core//variables.scss";
+
+.character {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px $color-icon;
+  border: 3px solid $color-detail;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__img {
+    grid-row: 3/4;
+    border-radius: 25px;
+    margin: auto;
+    height: 9.37rem;
+    width: 9.37rem;
+  }
+  &__name {
+    grid-row: 1/2;
+    margin: 20px 25px 0 25px;
+    color: $color-icon;
+    padding: 3px 0 5px 0;
+    font-size: 1.25rem;
+  }
+
+  &__info {
+    grid-row: 4/5;
+    margin: 15px 15px;
+    color: $color-icon;
+    text-transform: capitalize;
+    border-radius: 40%;
+  }
+}

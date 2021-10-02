@@ -1,0 +1,24 @@
+@import "./core/_reset.scss";
+@import "./core/_mixing.scss";
+@import "./core/_variables.scss";
+
+.page {
+  background-color: aqua;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: wrap;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+}

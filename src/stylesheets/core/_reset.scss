@@ -1,0 +1,14 @@
+@import "../core/variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  font-size: 16px;
+  font-size: $font-main;
+}

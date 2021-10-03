@@ -7,6 +7,7 @@ import getApiData from "../services/api";
 import ls from "../services/local-storage";
 import "../stylesheets/app.scss";
 import Header from "../components/Layout/Header";
+import Footer from "../components/Layout/Footer";
 
 const App = () => {
   const [users, setUsers] = useState(ls.get("users", []));
@@ -108,6 +109,7 @@ const App = () => {
           </Route>
           <Route path="/user/:userId" render={renderUserDetail} />
         </Switch>
+        <Footer />
       </div>
     </>
   );

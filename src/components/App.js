@@ -6,6 +6,7 @@ import Filters from "./Filters";
 import getApiData from "../services/api";
 import ls from "../services/local-storage";
 import "../stylesheets/app.scss";
+import Registration from "./Registration";
 
 const App = () => {
   const [users, setUsers] = useState(ls.get("users", []));
@@ -92,6 +93,7 @@ const App = () => {
     <>
       <div className="page">
         <h1 className="title--big">Find a Surgeon</h1>
+        <Registration />
         <Switch>
           <Route exact path="/">
             <div className="col2">

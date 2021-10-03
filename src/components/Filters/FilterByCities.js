@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/form-cities.scss";
+import "../../stylesheets/form-cities.scss";
 
 const FilterByCities = (props) => {
   const handleChange = (ev) => {

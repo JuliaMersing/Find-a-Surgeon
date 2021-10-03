@@ -1,7 +1,7 @@
 import React from "react";
-import FilterByName from "./FilterByName";
-import FilterByGender from "./FilterByGender";
-import FilterByCities from "./FilterByCities";
+import FilterByName from "../Filters/FilterByName";
+import FilterByGender from "../Filters/FilterByGender";
+import FilterByCities from "../Filters/FilterByCities";
 
 const Filters = (props) => {
   return (

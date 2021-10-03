@@ -11,10 +11,6 @@
 
   &__img {
     width: 4em;
-
-    @include tablet {
-      width: 390px;
-    }
   }
 
   &__title {

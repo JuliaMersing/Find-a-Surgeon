@@ -1,0 +1,69 @@
+@import "../Core/variables.scss";
+@import "../core/mixing.scss";
+
+.userId {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3em;
+
+  &__name {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-align: center;
+
+    @include tablet {
+      font-size: 2em;
+    }
+  }
+
+  &__card {
+    color: $color-icon;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30em;
+    width: 15em;
+    margin-bottom: 1em;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 25em;
+      width: 40em;
+    }
+  }
+
+  &__image {
+    height: 16em;
+    border-radius: 25px;
+    margin-bottom: 0.2em;
+
+    @include tablet {
+      margin-right: 2em;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+  }
+
+  &__list {
+    margin-bottom: 0.5em;
+  }
+}
+
+.home_icon {
+  background-color: $color-secudary;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: 1px solid $color-icon;
+  color: $color-icon;
+  margin-top: 1.25rem;
+  &:hover {
+    background-color: $color-hover;
+  }
+}

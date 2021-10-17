@@ -13,9 +13,9 @@ const FilterByCities = (props) => {
     return props.cities.map((city, index) => {
       return (
         <li key={index}>
-          <label>
+          <label className="form__label">
             <input
-              className="input"
+              className="form__inputCity"
               type="checkbox"
               name="city"
               value={city}

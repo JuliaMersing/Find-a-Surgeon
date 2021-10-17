@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../stylesheets/users/userCard.scss";
 
 const User = (props) => {
   const getGender = () => {
@@ -13,20 +14,20 @@ const User = (props) => {
   };
 
   return (
-    <article className="card">
+    <article className="user">
       <img
-        className="card__img"
+        className="user__img"
         src={props.user.image}
         alt={`Photo ${props.user.name}`}
         title={`Photo ${props.user.name}`}
       />
-      <h4 className="card__title">{props.user.name}</h4>
-      <p className="card__description">
+      <h4 className="user__name">{props.user.name}</h4>
+      <p className="user__info">
         {props.user.city} / {getGender()}
       </p>
       <Link to={`/user/${props.user.id}`}>
         {" "}
-        <button>Book a 3D consultation</button>{" "}
+        <button className="user__button">Book a 3D consultation</button>{" "}
       </Link>
     </article>
   );

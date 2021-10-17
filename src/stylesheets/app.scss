@@ -3,7 +3,7 @@
 @import "./core/_variables.scss";
 
 .page {
-  background-color: aqua;
+  background-color: $color-background;
   width: 100%;
   height: 100%;
   display: flex;

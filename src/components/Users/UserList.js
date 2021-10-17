@@ -1,5 +1,6 @@
 import React from "react";
 import User from "./User";
+import "../../stylesheets/users/userList.scss";
 
 const UserList = (props) => {
   const userElements = props.users.map((user) => {

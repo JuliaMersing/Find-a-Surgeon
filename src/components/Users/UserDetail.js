@@ -1,42 +1,35 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Booking from "../Booking";
-import Registration from "../Registration";
+import "../../stylesheets/users/userDetail.scss";
 
 const UserDetail = (props) => {
   return (
-    <>
-      <Link to="/">Home</Link>
-      <div className="card">
-        <header>
-          <h2>{props.user.name}</h2>
-        </header>
-        <section>
-          <img
-            className="card__img"
-            src={props.user.image}
-            alt={props.user.name}
-          />
-          <h4 className="card__title">{props.user.name}</h4>
-        </section>
-      </div>
-      <div>
-        <ul className="ml-1 mt-1">
-          <li>
-            About: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad
-            dolor maxime quas praesentium, impedit hic reprehenderit quibusdam
-            voluptatum dicta eaque, exercitationem ipsam. Nobis beatae nisi
-            officiis? Quisquam pariatur ratione enim.
-          </li>
-          <li>Gender: {props.user.gender}</li>
-          <li>Email: {props.user.email}</li>
-          <li>City: {props.user.city}</li>
-          <li>Country: {props.user.country}</li>
-        </ul>
-        <Registration />
-        <Booking />
-      </div>
-    </>
+    <div className="userId">
+      <article className="userId__card">
+        <img
+          className="userId__image"
+          src={props.user.image}
+          alt={props.user.name}
+        />
+        <div className="userId__details">
+          <h4 className="userId__name"> {props.user.name}</h4>
+          <ul>
+            <li className="userId__list">
+              About: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Reprehenderit ullam architecto cumque voluptatem, corporis dolorem
+              eligendi, dolorum vitae consequatur rem cum consectetur,
+              asperiores expedita ut ab fuga placeat quae aspernatur.
+            </li>
+            <li className="userId__list">Contry: {props.user.country}</li>
+            <li className="userId__list">City: {props.user.city}</li>
+            <li className="userId__list">Email: {props.user.email}</li>
+          </ul>
+        </div>
+      </article>
+      <Link to="/">
+        <span className="home_icon">👈🏻</span>
+      </Link>
+    </div>
   );
 };
 

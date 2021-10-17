@@ -2,6 +2,7 @@ import React from "react";
 import FilterByName from "../Filters/FilterByName";
 import FilterByGender from "../Filters/FilterByGender";
 import FilterByCities from "../Filters/FilterByCities";
+import "../../stylesheets/filters/filters.scss";
 
 const Filters = (props) => {
   return (

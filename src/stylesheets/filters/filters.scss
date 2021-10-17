@@ -1,12 +1,43 @@
+@import "../core/_variables.scss";
 @import "../core/mixing.scss";
 
-.form__container {
+.form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
 
-  @include tablet {
-    flex-direction: row;
-    margin-bottom: 10px;
+  &__label {
+    color: $color-icon;
+    font-size: 25px;
+    background-color: $color-background;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: flex-start;
+
+    @media all and (min-width: 768px) {
+      display: inline;
+    }
+  }
+
+  &__input {
+    width: 250px;
+    height: 40px;
+    color: $color-secudary;
+    border: 1px solid $color-icon;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.9em;
+  }
+
+  &__inputCity {
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 0.9em;
+    color: $color-secudary;
+  }
+
+  @media all and (min-width: 768px) {
+    margin-right: 20px;
   }
 }

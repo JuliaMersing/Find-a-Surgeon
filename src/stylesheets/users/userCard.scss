@@ -1,12 +1,12 @@
 @import "../core//variables.scss";
 
-.character {
+.user {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   border-radius: 25px;
   box-shadow: 5px 5px 10px $color-icon;
-  border: 3px solid $color-detail;
+  border: 3px solid $color-hover;
 
   &:hover {
     transform: scale(1.05);
@@ -33,5 +33,13 @@
     color: $color-icon;
     text-transform: capitalize;
     border-radius: 40%;
+  }
+
+  &__button {
+    width: 10em;
+    border-radius: 1em;
+    margin-bottom: 0.6em;
+    background-color: $color-icon;
+    color: $color-background;
   }
 }

@@ -6,7 +6,8 @@
   flex-direction: column;
   border-radius: 25px;
   box-shadow: 5px 5px 10px $color-icon;
-  border: 3px solid $color-hover;
+  border: 3px solid $color-detail;
+  width: 19em;
 
   &:hover {
     transform: scale(1.05);
@@ -16,9 +17,11 @@
     grid-row: 3/4;
     border-radius: 25px;
     margin: auto;
-    height: 9.37rem;
-    width: 9.37rem;
+    height: 7em;
+    width: 7em;
+    margin-top: 0.5em;
   }
+
   &__name {
     grid-row: 1/2;
     margin: 20px 25px 0 25px;
@@ -32,14 +35,17 @@
     margin: 15px 15px;
     color: $color-icon;
     text-transform: capitalize;
-    border-radius: 40%;
   }
 
   &__button {
     width: 10em;
     border-radius: 1em;
     margin-bottom: 0.6em;
-    background-color: $color-icon;
+    background-color: $color-secudary;
     color: $color-background;
+    &:hover {
+      background-color: $color-hover;
+      color: $color-detail;
+    }
   }
 }

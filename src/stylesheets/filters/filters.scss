@@ -8,14 +8,11 @@
 
   &__label {
     color: $color-icon;
-    font-size: 25px;
     background-color: $color-background;
-    margin-left: 10px;
-    margin-right: 10px;
     display: flex;
     align-items: flex-start;
 
-    @media all and (min-width: 768px) {
+    @include tablet {
       display: inline;
     }
   }
@@ -28,6 +25,7 @@
     border-radius: 6px;
     text-align: center;
     font-size: 0.9em;
+    margin-bottom: 0.5em;
   }
 
   &__inputCity {
@@ -37,7 +35,7 @@
     color: $color-secudary;
   }
 
-  @media all and (min-width: 768px) {
+  @include tablet {
     margin-right: 20px;
   }
 }

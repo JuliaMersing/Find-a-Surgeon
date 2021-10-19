@@ -12,7 +12,6 @@ const FilterByGender = (props) => {
       <label className="form__label" htmlFor="gender">
         Gender:
       </label>
-
       <select
         className="form__input"
         name="gender"

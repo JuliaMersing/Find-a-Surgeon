@@ -40,7 +40,8 @@ const App = () => {
     } else if (data.key === "gender") {
       setFilterGender(data.value);
     } else if (data.key === "city") {
-      if (filterCities.includes(data.value)) {
+      setFilterCities(data.value);
+      /*if (filterCities.includes(data.value)) {
         const newFilterCities = filterCities.filter(
           (city) => city !== data.value
         );
@@ -48,7 +49,7 @@ const App = () => {
       } else {
         filterCities.push(data.value);
         setFilterCities([...filterCities]);
-      }
+      }*/
     }
   };
 

@@ -51,7 +51,7 @@ FILTRO COMO GENDER
 
 }; */
 
-  const renderCities = () => {
+  /*const renderCities = () => {
     return props.cities.map((city, index) => {
       return (
         <li key={index}>
@@ -69,16 +69,45 @@ FILTRO COMO GENDER
         </li>
       );
     });
+  };*/
+
+  const renderCities = () => {
+    return props.cities.map((city, index) => {
+      return (
+        <option key={index} value={city}>
+          {city}
+        </option>
+      );
+    });
   };
 
   return (
+    <>
+      <label className="form__label" htmlFor="city">
+        City:
+      </label>
+      <select
+        className="form__input"
+        name="city"
+        id="city"
+        isClearable={true}
+        value={props.FilterByCities}
+        onChange={handleChange}
+      >
+        <option value="">All</option>
+        {renderCities()}
+      </select>
+    </>
+  );
+
+  /*return (
     <>
       <label className="form__label display-block" htmlFor="city">
         City:
       </label>
       <ul className="filterCities">{renderCities()}</ul>
     </>
-  );
+  );*/
 };
 
 export default FilterByCities;

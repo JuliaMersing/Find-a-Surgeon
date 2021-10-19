@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { AppointmentPicker } from "react-appointment-picker";
+import "../../stylesheets/users/userDetail.scss";
 
 export default class App extends Component {
   state = {
@@ -97,7 +98,7 @@ export default class App extends Component {
     const { loading } = this.state;
     return (
       <div>
-        <h1>Appointment Picker</h1>
+        <h1 className="userId__name">Appointment Picker</h1>
         <AppointmentPicker
           addAppointmentCallback={this.addAppointmentCallback}
           removeAppointmentCallback={this.removeAppointmentCallback}

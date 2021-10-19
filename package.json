@@ -14,6 +14,7 @@
     "node-sass": "^6.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
+    "react-appointment-picker": "^3.2.0",
     "react-datepicker": "^4.2.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../stylesheets/users/userDetail.scss";
-import DataPicker from "../Booking/DataPicker";
+import AppointmentPick from "../Booking/AppointmentPick";
 
 const UserDetail = (props) => {
   return (
@@ -27,7 +27,7 @@ const UserDetail = (props) => {
           </ul>
         </div>
       </article>
-      <DataPicker />
+      <AppointmentPick />
       <Link to="/">
         <span className="home_icon">👈🏻</span>
       </Link>

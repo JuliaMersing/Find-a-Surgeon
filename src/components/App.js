@@ -8,6 +8,7 @@ import ls from "../services/local-storage";
 import "../stylesheets/app.scss";
 import Header from "../components/Layout/Header";
 import Footer from "../components/Layout/Footer";
+import NotFound from "../components/NotFound";
 
 const App = () => {
   const [users, setUsers] = useState(ls.get("users", []));
@@ -41,15 +42,6 @@ const App = () => {
       setFilterGender(data.value);
     } else if (data.key === "city") {
       setFilterCities(data.value);
-      /*if (filterCities.includes(data.value)) {
-        const newFilterCities = filterCities.filter(
-          (city) => city !== data.value
-        );
-        setFilterCities(newFilterCities);
-      } else {
-        filterCities.push(data.value);
-        setFilterCities([...filterCities]);
-      }*/
     }
   };
 
@@ -97,7 +89,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Header />
-            <div className="col2">
+            <div>
               <Filters
                 filterName={filterName}
                 filterGender={filterGender}
@@ -105,7 +97,13 @@ const App = () => {
                 cities={getCities()}
                 handleFilter={handleFilter}
               />
-              <UserList users={filteredUsers} />
+              <ul>
+                {filteredUsers.length > 0 ? (
+                  <UserList users={filteredUsers} />
+                ) : (
+                  <NotFound />
+                )}
+              </ul>
             </div>
           </Route>
           <Route path="/user/:userId" render={renderUserDetail} />

@@ -1,0 +1,31 @@
+@import "../stylesheets/core/variables.scss";
+
+.notfound {
+  color: $color-icon;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin-top: 4em;
+  font-size: 1.2em;
+}
+
+.notfound_img {
+  width: 18.75em;
+  height: 12.5em;
+  align-content: center;
+  margin-top: 1.56em;
+  margin-bottom: 1.25em;
+}
+
+.home_icon {
+  background-color: $color-secudary;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: 1px solid $color-icon;
+  color: $color-icon;
+  margin-top: 3em;
+  &:hover {
+    background-color: $color-hover;
+  }
+}

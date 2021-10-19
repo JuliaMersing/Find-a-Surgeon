@@ -17,9 +17,9 @@ Add an extra filter to search by gender.
 
 ## Built with
 
-Visual Code Studio: as code editor
-SASS
-React
+- Visual Code Studio: as code editor
+- SASS
+- React
 
 ## Can you help me to improve?
 

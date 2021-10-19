@@ -1,5 +1,4 @@
 import React from "react";
-import "../../stylesheets/form-cities.scss";
 
 const FilterByCities = (props) => {
   const handleChange = (ev) => {
@@ -21,20 +20,22 @@ const FilterByCities = (props) => {
 
   return (
     <>
-      <label className="form__label" htmlFor="city">
-        City:
-      </label>
-      <select
-        className="form__input"
-        name="city"
-        id="city"
-        isClearable={true}
-        value={props.FilterByCities}
-        onChange={handleChange}
-      >
-        <option value="">All</option>
-        {renderCities()}
-      </select>
+      <div className="form__container">
+        <label className="form__label" htmlFor="city">
+          City:
+        </label>
+        <select
+          className="form__input"
+          name="city"
+          id="city"
+          isClearable={true}
+          value={props.FilterByCities}
+          onChange={handleChange}
+        >
+          <option value="">All</option>
+          {renderCities()}
+        </select>
+      </div>
     </>
   );
 };

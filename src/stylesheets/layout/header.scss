@@ -5,13 +5,17 @@
   display: flex;
   height: auto;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 1em;
+  margin-top: 2em;
   display: flex;
   align-items: center;
 
   &__img {
     width: 4em;
     margin-right: 1em;
+    @include tablet {
+      width: 7em;
+    }
   }
 
   &__title {
@@ -19,7 +23,10 @@
     margin-right: 25px;
     color: $color-icon;
     @include tablet {
-      font-size: 1.1em;
+      font-size: 3em;
+    }
+    @include desktop {
+      font-size: 4em;
     }
   }
 }

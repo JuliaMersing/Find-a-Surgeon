@@ -1,5 +1,6 @@
 @import "../Core/variables.scss";
 @import "../core/mixing.scss";
+@import "../core/_reset.scss";
 
 .userId {
   display: flex;
@@ -53,6 +54,10 @@
 
   &__list {
     margin-bottom: 0.5em;
+  }
+
+  &__link {
+    margin-bottom: 2em;
   }
 }
 

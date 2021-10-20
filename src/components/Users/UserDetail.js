@@ -27,10 +27,10 @@ const UserDetail = (props) => {
           </ul>
         </div>
       </article>
-      <AppointmentPick />
-      <Link to="/">
+      <Link className="userId__link" to="/">
         <span className="home_icon">👈🏻</span>
       </Link>
+      <AppointmentPick />
     </div>
   );
 };

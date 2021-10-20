@@ -16,6 +16,7 @@
     "react": "^17.0.1",
     "react-appointment-picker": "^3.2.0",
     "react-datepicker": "^4.2.1",
+    "react-datepicker2": "^3.3.13",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",

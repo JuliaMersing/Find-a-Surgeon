@@ -1,0 +1,9 @@
+@import "./core/_reset.scss";
+@import "./core/_mixing.scss";
+@import "./core/_variables.scss";
+
+.App {
+  &__title {
+    color: $color-icon;
+  }
+}

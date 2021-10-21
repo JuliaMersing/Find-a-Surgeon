@@ -25,7 +25,7 @@ const UserDetail = ({ user }) => {
         </div>
       </article>
       <Link className="userId__link" to="/">
-        <span className="home_icon">👈🏻</span>
+        <span className="userId__icon">👈🏻</span>
       </Link>
       <AppointmentPicker />
     </div>

@@ -26,3 +26,11 @@
 .react-datepicker__day-name {
   color: $color-background;
 }
+
+.react-datepicker-ignore-onclickoutside {
+  background-color: $color-input;
+  color: $color-icon;
+}
+
+.react-datepicker-popper {
+}

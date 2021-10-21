@@ -1,6 +1,11 @@
 @import "../core//variables.scss";
 @import "../core/_reset.scss";
 
+.container {
+  height: 18.5em;
+  padding: 0.5em;
+  width: 20.5em;
+}
 .user {
   box-sizing: border-box;
   display: flex;
@@ -11,7 +16,7 @@
   width: 19em;
 
   &:hover {
-    transform: scale(1.05);
+    background-color: $color-hover;
   }
 
   &__img {

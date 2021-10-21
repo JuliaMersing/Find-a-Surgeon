@@ -4,22 +4,25 @@ import FilterByGender from "../Filters/FilterByGender";
 import FilterByCities from "../Filters/FilterByCities";
 import "../../stylesheets/filters/filters.scss";
 
-const Filters = (props) => {
+const Filters = ({
+  filterName,
+  handleFilter,
+  filterGender,
+  filterCities,
+  cities,
+}) => {
   return (
     <section>
       <form className="form">
-        <FilterByName
-          filterName={props.filterName}
-          handleFilter={props.handleFilter}
-        />
+        <FilterByName filterName={filterName} handleFilter={handleFilter} />
         <FilterByGender
-          filterGender={props.filterGender}
-          handleFilter={props.handleFilter}
+          filterGender={filterGender}
+          handleFilter={handleFilter}
         />
         <FilterByCities
-          filterCities={props.filterCities}
-          cities={props.cities}
-          handleFilter={props.handleFilter}
+          filterCities={filterCities}
+          cities={cities}
+          handleFilter={handleFilter}
         />
       </form>
     </section>

@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const FilterByGender = (props) => {
+const FilterByGender = ({ filterGender, handleFilter }) => {
   const handleChange = (ev) => {
-    props.handleFilter({
+    handleFilter({
       value: ev.target.value,
       key: "gender",
     });
@@ -17,7 +18,7 @@ const FilterByGender = (props) => {
           className="form__input"
           name="gender"
           id="gender"
-          value={props.filterGender}
+          value={filterGender}
           onChange={handleChange}
         >
           <option value="">All</option>
@@ -28,6 +29,10 @@ const FilterByGender = (props) => {
       </div>
     </>
   );
+};
+
+FilterByGender.propTypes = {
+  specie: PropTypes.string,
 };
 
 export default FilterByGender;

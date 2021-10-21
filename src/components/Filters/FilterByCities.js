@@ -1,15 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const FilterByCities = (props) => {
+const FilterByCities = ({ cities, handleFilter, FilterByCities }) => {
   const handleChange = (ev) => {
-    props.handleFilter({
+    handleFilter({
       value: ev.target.value,
       key: "city",
     });
   };
 
   const renderCities = () => {
-    return props.cities.map((city, index) => {
+    return cities.map((city, index) => {
       return (
         <option key={index} value={city}>
           {city}
@@ -29,7 +30,7 @@ const FilterByCities = (props) => {
           name="city"
           id="city"
           isClearable={true}
-          value={props.FilterByCities}
+          value={FilterByCities}
           onChange={handleChange}
         >
           <option value="">All</option>
@@ -38,6 +39,10 @@ const FilterByCities = (props) => {
       </div>
     </>
   );
+};
+
+FilterByCities.propTypes = {
+  specie: PropTypes.string,
 };
 
 export default FilterByCities;

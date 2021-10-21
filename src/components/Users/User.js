@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "../../stylesheets/users/userCard.scss";
 
-const User = (props) => {
+const User = ({ user }) => {
   const getGender = () => {
-    if (props.user.gender === "female") {
+    if (user.gender === "female") {
       return "Female";
-    } else if (props.user.gender === "male") {
+    } else if (user.gender === "male") {
       return "Male";
     } else {
       return "No binario";
@@ -14,23 +15,31 @@ const User = (props) => {
   };
 
   return (
-    <article className="user">
-      <img
-        className="user__img"
-        src={props.user.image}
-        alt={`Photo ${props.user.name}`}
-        title={`Photo ${props.user.name}`}
-      />
-      <h4 className="user__name">{props.user.name}</h4>
-      <p className="user__info">
-        {props.user.city} / {getGender()}
-      </p>
-      <Link to={`/user/${props.user.id}`}>
-        {" "}
-        <button className="user__button">Book a 3D consultation</button>{" "}
-      </Link>
-    </article>
+    <div className="container">
+      <article className="user">
+        <img
+          className="user__img"
+          src={user.image}
+          alt={`Portrait of user`}
+          title={`Photo ${user.name}`}
+        />
+        <h4 className="user__name">{user.name}</h4>
+        <p className="user__info">
+          {user.city} / {getGender()}
+        </p>
+        <Link to={`/user/${user.id}`}>
+          {" "}
+          <button className="user__button">Book a 3D consultation</button>{" "}
+        </Link>
+      </article>
+    </div>
   );
+};
+
+User.propTypes = {
+  name: PropTypes.string,
+  image: PropTypes.string,
+  gender: PropTypes.string,
 };
 
 export default User;

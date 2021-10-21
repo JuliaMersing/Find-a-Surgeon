@@ -4,10 +4,10 @@
 .cards {
   display: grid;
   grid-column: 1fr;
-  text-align: center;
   column-gap: 0.63rem;
   row-gap: 0.63rem;
   margin-top: 1em;
+  justify-content: center;
 
   @include tablet {
     display: flex;

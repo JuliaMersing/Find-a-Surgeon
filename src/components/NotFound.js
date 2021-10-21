@@ -1,4 +1,5 @@
 import "../stylesheets/notFound.scss";
+import PropTypes from "prop-types";
 
 const Notfound = () => {
   return (
@@ -14,6 +15,10 @@ const Notfound = () => {
       />
     </div>
   );
+};
+
+Notfound.propTypes = {
+  Notfound: PropTypes.func,
 };
 
 export default Notfound;

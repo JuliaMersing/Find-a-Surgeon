@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-import UserList from "./Users/UserList";
-import UserDetail from "./Users/UserDetail";
-import Filters from "../components/Filters/Filters";
 import getApiData from "../services/api";
 import ls from "../services/local-storage";
-import "../stylesheets/app.scss";
 import Header from "../components/Layout/Header";
 import Footer from "../components/Layout/Footer";
 import NotFound from "../components/NotFound";
+import "../stylesheets/app.scss";
+import UserList from "./Users/UserList";
+import UserDetail from "./Users/UserDetail";
+import Filters from "../components/Filters/Filters";
 
 const App = () => {
   const [users, setUsers] = useState(ls.get("users", []));
@@ -22,7 +22,7 @@ const App = () => {
         setUsers(usersData);
       });
     }
-  }, []);
+  }, [users.length]);
 
   useEffect(() => {
     ls.set("users", users);
@@ -64,8 +64,8 @@ const App = () => {
       }
     });
 
-  const renderUserDetail = (props) => {
-    const routeUserId = props.match.params.userId;
+  const renderUserDetail = ({ match }) => {
+    const routeUserId = match.params.userId;
     const foundUser = users.find((user) => {
       return user.id === routeUserId;
     });

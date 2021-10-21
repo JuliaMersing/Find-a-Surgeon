@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "../../stylesheets/filters/filters.scss";
 
-const FilterByName = (props) => {
+const FilterByName = ({ filterName, handleFilter }) => {
   const handleChange = (ev) => {
-    props.handleFilter({
+    handleFilter({
       value: ev.target.value,
       key: "name",
     });
@@ -19,12 +20,16 @@ const FilterByName = (props) => {
           type="text"
           name="name"
           id="name"
-          value={props.filterName}
+          value={filterName}
           onChange={handleChange}
         />
       </div>
     </>
   );
+};
+
+FilterByName.propTypes = {
+  specie: PropTypes.string,
 };
 
 export default FilterByName;

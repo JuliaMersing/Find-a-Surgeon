@@ -4,16 +4,14 @@ Implement a web application to allow patients to request appointments for doctor
 
 ## What does the web do?
 
-The app must fetch from an API.
-Render the doctors information on the home page. Required information is: Picture, name and city.
-Add a filter that allows the user to search by name any doctor.
-If the user search an unexistant doctor a non found page will appeard.
-The filter must work either if the user writes with caps on or not.
-I add some styles (don't blame me, I'm not a designer)
-Use grid for the character list.
-Make it responsive.
-If the user goes to unexistant pages we must give a proper feedback.
-Add an extra filter to search by gender.
+- The app must fetch from an API.
+- Render the doctors information on the home page. Required information is: Picture, name and city.
+- Add a filter that allows the user to search by name any doctor.
+- If the user search an unexistant doctor a non found page will appeard.
+- The filter must work either if the user writes with caps on or not.
+- I add some styles (don't blame me, I'm not a designer). Palette colors are from Fantastic Mr. Fox.
+- Use grid for the character list.
+- Make it responsive.
 
 ## Built with
 

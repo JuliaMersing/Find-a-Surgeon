@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../stylesheets/users/userDetail.scss";
-import AppointmentPick from "../Booking/AppointmentPick";
+import AppointmentPicker from "../Booking/AppointmentPicker";
 import PropTypes from "prop-types";
 
 const UserDetail = ({ user }) => {
@@ -27,7 +27,7 @@ const UserDetail = ({ user }) => {
       <Link className="userId__link" to="/">
         <span className="home_icon">👈🏻</span>
       </Link>
-      <AppointmentPick />
+      <AppointmentPicker />
     </div>
   );
 };

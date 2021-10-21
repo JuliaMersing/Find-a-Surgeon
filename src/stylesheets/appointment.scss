@@ -2,8 +2,27 @@
 @import "./core/_mixing.scss";
 @import "./core/_variables.scss";
 
-.App {
-  &__title {
-    color: $color-icon;
-  }
+.react-datepicker__current-month {
+  color: $color-background;
+}
+
+.react-datepicker__header {
+  background-color: $color-icon;
+  border-bottom: 1px solid $color-background;
+}
+
+.react-datepicker-time__header {
+  color: $color-background;
+}
+
+.react-datepicker {
+  color: $color-icon;
+}
+
+.react-datepicker__day {
+  color: $color-icon;
+}
+
+.react-datepicker__day-name {
+  color: $color-background;
 }

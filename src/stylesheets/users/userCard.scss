@@ -16,7 +16,7 @@
   width: 19em;
 
   &:hover {
-    background-color: $color-hover;
+    transform: scale(1.05);
   }
 
   &__img {
@@ -47,7 +47,7 @@
     width: 10em;
     border-radius: 1em;
     margin-bottom: 0.6em;
-    background-color: $color-secudary;
+    background-color: $color-secundary;
     color: $color-background;
     &:hover {
       background-color: $color-hover;

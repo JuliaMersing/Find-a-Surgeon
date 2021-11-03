@@ -72,8 +72,6 @@ const App = () => {
 
     if (foundUser !== undefined) {
       return <UserDetail user={foundUser} />;
-    } else {
-      return <p>User not found</p>;
     }
   };
 
